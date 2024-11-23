@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title >Practical 02</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>New This Week</ion-label>
+    </ion-list-header>
+  </ion-list>
+
+  <ion-item *ngFor="let item of items" [detail]="true">
+    <ion-label>
+      {{item?.name}}
+      <p>
+        <ion-text color="medium">
+          {{item?.description}}
+        </ion-text>
+       </p>
+    </ion-label>
+    <!-- <ion-text color="primary" slot="end">
+      {{item?.id}}
+    </ion-text> -->
+      <ion-button>View</ion-button>
+
+
+  </ion-item>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Practical Footer 02</ion-title>
+  </ion-toolbar>
+</ion-footer>
