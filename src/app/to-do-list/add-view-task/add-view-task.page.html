@@ -1,0 +1,44 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title>{{id===0? 'Add Task': 'Task Details'}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="onSubmit()" >
+        @if(isEq0()){
+        <ion-icon slot="icon-only" name="save-sharp"></ion-icon>
+        }@else {
+          <ion-icon slot="icon-only" name="arrow-up-circle-sharp"></ion-icon>
+        }
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary">
+  <form [formGroup]="taskForm">
+    <ion-list class="ion-margin">
+      <ion-input
+        type="text"
+        class="ion-margin-bottom"
+        label="Title"
+        labelPlacement="floating"
+        placeholder="Task Title"
+        formControlName="title"
+        errorText="Title is required"
+        >
+      </ion-input>
+
+        <ion-textarea
+          [autoGrow]="true"
+          placeholder="Type Your Task Here"
+          formControlName="description"
+          errorText="Description is required"
+          ></ion-textarea>
+
+      </ion-list>
+
+  </form>
+</ion-content>

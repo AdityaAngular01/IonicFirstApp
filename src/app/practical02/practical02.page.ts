@@ -17,6 +17,7 @@ import {
   IonButton,
   IonItem,
 } from '@ionic/angular/standalone';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-practical02',
@@ -29,9 +30,6 @@ import {
     IonList,
     IonListHeader,
     IonLabel,
-    IonCol,
-    IonRow,
-    IonGrid,
     IonFooter,
     IonContent,
     IonHeader,
@@ -43,7 +41,9 @@ import {
   ],
 })
 export class Practical02Page {
-  constructor() {}
+  constructor(private title:Title) {
+    title.setTitle('Ionic List Example');
+  }
 
   items: any[] = [
     {

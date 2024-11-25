@@ -1,0 +1,36 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title>To Do List</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/', 'to-do-list', 'add-view-task', 0]">
+        <ion-icon slot="icon-only" name="add-circle-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header class="ion-margin-bottom">
+      <ion-label>Today's Task</ion-label>
+    </ion-list-header>
+
+    @for(task of allTasks; track $index){
+    <ion-item
+      [detail]="true"
+      [routerLink]="['/','to-do-list', 'add-view-task', $index+1]"
+    >
+      <ion-label>
+        {{task?.title}}
+        <p>
+          <ion-text color="primary">
+            {{task?.description}}
+          </ion-text>
+        </p>
+        
+      </ion-label>
+    </ion-item>
+    }
+  </ion-list>
+</ion-content>

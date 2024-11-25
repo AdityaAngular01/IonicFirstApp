@@ -1,0 +1,13 @@
+ion-list{
+  ion-list-header{
+    ion-label{
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+  ion-item{
+    ion-button{
+      text-transform: capitalize;
+    }
+  }
+}

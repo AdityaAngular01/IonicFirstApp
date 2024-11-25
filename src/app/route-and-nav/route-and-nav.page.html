@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Route and Navigation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Grocery Items</ion-label>
+    </ion-list-header>
+
+    @for(item of items; track $index){
+      <ion-item [detail]="true" [routerLink]="['/','route-and-nav', 'item-details', item.id]">
+      <ion-label>
+        {{item.name}}
+        <p>{{item.description}}</p>
+      </ion-label>
+      <!-- <ion-button color="secondary" slot="end" [strong]="true" fill="clear" (click)="onViewItem(item)">
+        View
+      </ion-button> -->
+    </ion-item>
+    }@empty {
+      <div class="ion-margin">No grocery items found.</div>
+    }
+
+  </ion-list>
+  @if(image){
+    <img [src]="image" alt="">
+  }
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <!-- <ion-title>Footer</ion-title> -->
+     <ion-button expand="block" color="secondary" [strong]="true" (click)="uploadImage()">Upload Grocery List</ion-button>
+  </ion-toolbar>
+</ion-footer>
