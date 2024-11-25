@@ -4,7 +4,8 @@
 
     <ion-buttons slot="end">
       <ion-button [routerLink]="['/', 'to-do-list', 'add-view-task', 0]">
-        <ion-icon slot="icon-only" name="add-circle-sharp"></ion-icon>
+        <!-- <ion-icon slot="icon-only" name="add-circle-sharp"></ion-icon> -->
+         <ion-icon name="create-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -28,7 +29,7 @@
             {{task?.description}}
           </ion-text>
         </p>
-        
+
       </ion-label>
     </ion-item>
     }

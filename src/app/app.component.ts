@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { addCircleSharp, arrowUpCircleSharp, saveOutline, saveSharp } from 'ionicons/icons';
+import { addCircleSharp, arrowUpCircleSharp, createOutline, createSharp, saveOutline, saveSharp } from 'ionicons/icons';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -18,7 +18,9 @@ export class AppComponent {
       saveSharp,
       saveOutline,
       addCircleSharp,
-      arrowUpCircleSharp
+      arrowUpCircleSharp,
+      createOutline,
+      createSharp
     })
   }
 }
